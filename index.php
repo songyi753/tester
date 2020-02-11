@@ -85,7 +85,24 @@ print_r($food);
 
 echo "<input type=\"text\" name=\"name\" value=\"hi\"><br>";
 
-//@mysql_connect('localhost','root','');
+/*$conn = new mysqli('127.0.0.1', 'root','','hello');// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+$sql = "INSERT INTO songyi(secondname)
+VALUES ('John')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+*/
+
 die('error'); //exit();
 
 ?>
