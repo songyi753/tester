@@ -2,13 +2,17 @@
     $offset = 0;
     $find='is';
     $find_length = strlen($find);
-    $string = 'This is a good thing .Try isn\'t it fun?';
+    $string = 'This is a good things.Try isn\'t it fun?';
 
-    while($position = strpos($string,$find,$offset))
+    while($position = strpos($string,$find,$offset)) //position 
     {
         echo $find.' at word '.$position.'<br>';
         $offset = $position + $find_length;
     }
+
+    $string_new = substr_replace($string ,'songyi',15 ,6); //first way
+    $new_string = str_replace('is','',$string);
+    echo $string_new.'<br>'.$new_string.'<br>';
 
     /*
     $string_shuffled =str_shuffle($string);   -shuffle word
@@ -21,10 +25,11 @@
 
     trim(),ltrim(),rtrim()
 
-    strpos
-
     addslashes               			-add slash before symbol
+
     */
+
+    
 
     $count1 = str_word_count($string);     //0 = word,1 = array,2 = string
     $count2 = str_word_count($string,1);

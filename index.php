@@ -74,6 +74,11 @@ foreach($food as $x =>$y){
 
 echo "<input type=\"text\" name=\"name\" value=\"hi\"><br>";
 
+$time = time();
+$actual_time = date('H:i:s',$time);
+
+echo $actual_time;
+
 /*$conn = new mysqli('127.0.0.1', 'root','','hello');// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
