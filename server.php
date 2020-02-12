@@ -1,4 +1,6 @@
 <?php
+    ob_start();
+
     $script_name = $_SERVER['SCRIPT_NAME'];
     $host = $_SERVER['HTTP_HOST'];
     $images = $host.'/images/';
@@ -15,3 +17,7 @@
 <form action="<?php echo $script_name; ?>" method="post">
     <input type="submit" name="submit" value="Submit">
 </form>
+
+<?php
+    //ob_end_flush();//clear buffer
+?>
