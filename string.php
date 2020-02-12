@@ -27,6 +27,8 @@
 
     addslashes               			-add slash before symbol
 
+    sort($colors); sort the array in order
+    rsort(); decending
     */
 
     

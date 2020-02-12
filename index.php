@@ -75,9 +75,12 @@ foreach($food as $x =>$y){
 echo "<input type=\"text\" name=\"name\" value=\"hi\"><br>";
 
 $time = time();
-$actual_time = date('H:i:s',$time);
+$actual_time = date('d m y @ H:i:s',$time);
+//can be modified by $actual_time = date('d m y @ H:i:s',$time+strtotime('1 week'));
 
 echo $actual_time;
+
+$rand =rand(1,6);//random number 1 to 6
 
 /*$conn = new mysqli('127.0.0.1', 'root','','hello');// Check connection
 if ($conn->connect_error) {
