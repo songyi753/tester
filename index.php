@@ -10,7 +10,8 @@ $day .='day';
 $date = 11;
 $year = 2020;
 
-echo $user_ip = $_SERVER['REMOTE_ADDR']; //show ip address
+echo $user_ip = $_SERVER['REMOTE_ADDR'].'<br>'; //show ip address
+
 
 function Name(){
 	echo ' Songyi<br>';
@@ -54,34 +55,22 @@ switch ($num) {
 		echo 'number not saved<br>';
 	break;
 }
-//string
-$count1 = str_word_count($string);     //0 = word,1 = array,2 = string
-$count2 = str_word_count($string,1);
-echo $count1.'<br>';
-print_r($count2);
 
-/*
-$string_shuffled =str_shuffle($string);   -shuffle word
+include 'form.php'; //can pass variable form the page to here
+include_once 'form.php';//included once then will not appear again
+//include similar with require
 
-$half = substr($string_shuffled,0,5);     -random generator 5 word
+$food = array('healthy'=>array('Pasta'=>300,'Pizza'=>1000),
+		'Unhealthy'=>array('Salad'=>150,'Vegetables'=>50));
 
-strrev($string)    				-reverse string
-similar_text($string_one,$string_two,$result);  -similarity in percent 
-strlen()
-
-trim(),ltrim(),rtrim()
-
-addslashes               			-add slash before symbol
-*/
-if (preg_match('/is/',$string)) {      //search or matching
-	echo 'match found.<br>';
-}else {
-	echo 'no match found.<br>';
+//print_r($food);
+foreach($food as $x =>$y){
+	echo $x.'<br>';
+	foreach($y as $z=>$a){
+		echo $z.' '.$a.' ';
+	}
+	echo '<br>';
 }
-
-$food = array('Pasta'=>300,'Pizza'=>1000,'Salad'=>150,'Vegetables'=>50);
-
-print_r($food);
 
 echo "<input type=\"text\" name=\"name\" value=\"hi\"><br>";
 
