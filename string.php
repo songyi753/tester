@@ -19,7 +19,7 @@
 
     $half = substr($string_shuffled,0,5);     -random generator 5 word
 
-    strrev($string)    				-reverse string 
+    strrev($string)    				          -reverse string 
     similar_text($string_one,$string_two,$result);  -similarity in percent 
     strlen()
 
@@ -27,8 +27,8 @@
 
     addslashes               			-add slash before symbol
 
-    sort($colors); sort the array in order
-    rsort(); decending
+    sort($colors);                      -sort the array in order
+    rsort();                            -decending
     */
 
     
