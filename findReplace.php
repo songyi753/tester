@@ -4,9 +4,9 @@
 
     if((isset($_POST['text']))&&(isset($_POST['search']))&&(isset($_POST['replace']))) //check
     {
-        $text = $_POST['text'];
-        $search = $_POST['search'];
-        $replace = $_POST['replace'];
+        $text = htmlentities($_POST['text']);
+        $search = htmlentities($_POST['search']);
+        $replace = htmlentities($_POST['replace']);
 
         $find_length = strlen($search);
 
