@@ -44,5 +44,7 @@
         echo '<br>no match found.<br>';
     }
 
+    //$encryption = md5($variable); encryption word usually for password
+
 
 ?>
