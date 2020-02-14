@@ -14,6 +14,16 @@
     imagecolorallocate($image,255,255,255);
     $text_color = imagecolorallocate($image,0,0,0);
 
-    imagestring($image,$font_size,0,15,30,$text_color,'/font.ttf',$text);
+    for($x=1;$x<=30;$x++)
+    {
+        $x1 = rand(1,100);
+        $y1 = rand(1,100);
+        $x2 = rand(1,100);
+        $y2 = rand(1,100);
+    }
+
+    imageline($image,$x1,$y1,$x2,$y2,$text_color);
+
+    imagestring($image,$font_size,0,15,30,$text_color,'font.ttf',$text);
     imagejpeg($image);
 ?>
