@@ -82,6 +82,8 @@ echo $actual_time;
 
 $rand =rand(1,6);//random number 1 to 6
 
+//asgasfgaga
+
 die('error'); //exit();
 
 ?>
