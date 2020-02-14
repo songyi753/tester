@@ -1,6 +1,6 @@
 <?php
     // require to connect to mailserver
-    $to = 'songyi753@hotmail.com';
+    echo $to = 'songyi753@hotmail.com';
     $subject = 'This is mail';
     $body = 'Testing';
     $headers = 'From: yizailover1@gmail.com';
