@@ -7,7 +7,7 @@
     $font_size = 4;
 
     $image_height = ImageFontHeight($font_size);
-    $image_width = ImageFOntWidth($font_size)*$EMAIL_LENGTH;
+    $image_width = ImageFontWidth($font_size)*$EMAIL_LENGTH;
 
     $image = imagecreate($image_width,$image_height);
 
