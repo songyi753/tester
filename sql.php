@@ -26,17 +26,27 @@
     </form>
     }*/
 
-    $charset = $conn -> character_set_name();
-    echo "Default character set is: " . $charset;
+    //$charset = $conn -> character_set_name();
+    //echo "Default character set is: " . $charset;
 
     //$sql = "Insert names Values('','gg','game','agnaona')";
     $sql = "SELECT `id`, `name` FROM `names` WHERE `name` LIKE '%s%'";
     $result = mysqli_query($conn, $sql);
 
     // Fetch all
-    $array = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    //$array = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    //print_r($array);\
 
-    print_r($array);
+    //print some
+    if ($result->num_rows > 0) {
+    // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"]. " - Name: " . $row["name"]. "<br>";
+        }
+    } 
+    else {
+    echo "0 results";
+    }
 
     $conn->close();
     
