@@ -28,6 +28,7 @@ function findmatch()
 <form id="search" name="search" action="anotherpage.php">
     type name:<br>
     <input type="text" name="search_text" onkeyup="findmatch();">
+</form>
 
 
 <div id="result"></div>

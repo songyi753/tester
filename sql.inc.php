@@ -4,7 +4,11 @@
     $pass = '';
     $db   = 'hello';
     
-    class ServerException extends Exception{}
+    class ServerException extends Exception{
+        public function showSpecific(){
+            return 'Error throw on line '.$this->getLine().' in '.$this->getFile();
+        }
+    }
 
     try{
         if(!($conn = new mysqli($host,$user,$pass,$db))){
@@ -15,7 +19,7 @@
 
 
     }catch(ServerException $ex){
-        echo 'Error: '.$ex->getMessage();
+        echo $ex->showSpecific();
     }
 
     /*
